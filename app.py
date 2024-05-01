@@ -43,7 +43,7 @@ def upload():
     # Assuming generate() function takes an image file as input
     caption = generate(filename)
 
-    return jsonify({'caption': caption})
+    return caption
 
 if __name__ == '__main__':
     app.run(debug=True)

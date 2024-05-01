@@ -1,6 +1,7 @@
 import requests
 import json
 import base64
+from flask import jsonify
 
 image_path="captured_image.png"
 
@@ -19,4 +20,4 @@ def generate(image_path):
     output = response.json()
     text = output[0]["generated_text"]
 
-    return text
+    return jsonify({'caption': text})
